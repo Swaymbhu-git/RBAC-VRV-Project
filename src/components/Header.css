@@ -1,0 +1,52 @@
+/* Header.css */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: linear-gradient(to bottom, #00264d, #000000); /* Fading bluish-black to dark black */
+    border-bottom: 3px solid #89c2ff; /* Glowing blue line at the bottom */
+    height: 60px; /* Fixed height to reduce vertical size */
+    box-sizing: border-box;
+}
+
+.logo img {
+    height: 40px; /* Set consistent height for the logo */
+    width: auto; /* Maintain aspect ratio */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    margin: 0 15px;
+    font-size: 1em;
+    cursor: pointer;
+    color: #ffffff; /* White color for nav items */
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #89c2ff; /* Light blue color when hovering over nav items */
+}
+
+.login-btn {
+    padding: 6px 12px; /* Adjusted padding for smaller button size */
+    font-size: 1em;
+    border: 2px solid #89c2ff; /* Blue border for the button */
+    border-radius: 4px;
+    background-color: transparent; /* Transparent background */
+    color: #89c2ff; /* Blue text color */
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+    background-color: white; /* White background on hover */
+    color: #00264d; /* Dark blue text color on hover */
+    border-color: #00264d; /* Dark blue border on hover */
+}
