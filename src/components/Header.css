@@ -1,52 +1,127 @@
-/* Header.css */
-.header {
+/* footer.css */
+.footer {
+    width: 100%;
+    overflow-x: hidden; /* prevent accidental horizontal scroll */
+    background: linear-gradient(to bottom, #00264d, #000000);
+    color: white;
+    padding: 30px 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .footer-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;        /* side padding */
+    box-sizing: border-box; /* include padding in width */
+  }
+  
+  .footer-row {
+    display: flex;
+    flex-wrap: wrap;           /* ← allow wrapping */
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  
+  .footer-section {
+    flex: 1 1 250px;  /* grow/shrink, base 250px */
+    min-width: 200px; /* won’t shrink below this */
+  }
+  
+  .footer-section h5 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    font-weight: bold;
+    border-bottom: 2px solid #89c2ff;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+  
+  .footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  
+  .logo-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background: linear-gradient(to bottom, #00264d, #000000); /* Fading bluish-black to dark black */
-    border-bottom: 3px solid #89c2ff; /* Glowing blue line at the bottom */
-    height: 60px; /* Fixed height to reduce vertical size */
-    box-sizing: border-box;
-}
-
-.logo img {
-    height: 40px; /* Set consistent height for the logo */
-    width: auto; /* Maintain aspect ratio */
-}
-
-.nav-list {
-    display: flex;
+    gap: 10px;
+  }
+  
+  .footer-logo {
+    max-width: 50px;
+  }
+  
+  .logo-text {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .tagline {
+    font-size: 14px;
+    color: #cccccc;
+    margin-top: 10px;
+  }
+  
+  .footer-section ul {
     list-style: none;
-    margin: 0;
     padding: 0;
-}
-
-.nav-item {
-    margin: 0 15px;
-    font-size: 1em;
-    cursor: pointer;
-    color: #ffffff; /* White color for nav items */
-    transition: color 0.3s ease;
-}
-
-.nav-item:hover {
-    color: #89c2ff; /* Light blue color when hovering over nav items */
-}
-
-.login-btn {
-    padding: 6px 12px; /* Adjusted padding for smaller button size */
-    font-size: 1em;
-    border: 2px solid #89c2ff; /* Blue border for the button */
-    border-radius: 4px;
-    background-color: transparent; /* Transparent background */
-    color: #89c2ff; /* Blue text color */
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.login-btn:hover {
-    background-color: white; /* White background on hover */
-    color: #00264d; /* Dark blue text color on hover */
-    border-color: #00264d; /* Dark blue border on hover */
-}
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 10px;
+  }
+  
+  .footer-link {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    position: relative;
+  }
+  
+  .footer-link:hover {
+    color: #89c2ff;
+  }
+  
+  .footer-link:hover::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(137, 194, 255, 0.4);
+    border-radius: 5px;
+    z-index: -1;
+  }
+  
+  .footer-section .fa {
+    margin-right: 8px;
+    font-size: 16px;
+    color: #89c2ff;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #89c2ff;
+    padding-top: 10px;
+  }
+  
+  /* STACK vertically on small screens */
+  @media (max-width: 768px) {
+    .footer-row {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .footer-section {
+      max-width: 400px;
+      margin-bottom: 20px;
+    }
+  }
+  
