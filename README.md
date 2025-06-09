@@ -13,3 +13,4 @@ Access the app in your browser on server
 "http://localhost:3000"
 
 All the required features of adding editing and deleting roles have been added.
+Access it live here: https://rbac-vrv-project-uxuw-32wiue0qq.vercel.app/
